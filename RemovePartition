@@ -1,0 +1,12 @@
+For windows OS.
+Open command prompt:
+diskpart
+list disk
+select disk X where X is the number from step 4
+list partition - There should be two, numbered 0 and 1, each about 7 GB
+select partition 0
+delete partition
+select partition 1
+delete partition
+create partition primary
+exit
